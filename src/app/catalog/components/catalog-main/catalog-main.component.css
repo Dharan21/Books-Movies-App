@@ -1,0 +1,12 @@
+.grid-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.grid-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+

@@ -1,0 +1,87 @@
+{
+    "error": "0",
+    "total": "50",
+    "page": "1",
+    "books": [
+        {
+            "title": "Effective JavaScript",
+            "subtitle": "68 Specific Ways to Harness the Power of JavaScript",
+            "isbn13": "9780321812186",
+            "price": "$21.99",
+            "image": "https://itbook.store/img/books/9780321812186.png",
+            "url": "https://itbook.store/books/9780321812186"
+        },
+        {
+            "title": "Learning JavaScript",
+            "subtitle": "A Hands-On Guide to the Fundamentals of Modern JavaScript",
+            "isbn13": "9780321832740",
+            "price": "$8.99",
+            "image": "https://itbook.store/img/books/9780321832740.png",
+            "url": "https://itbook.store/books/9780321832740"
+        },
+        {
+            "title": "JavaScript: The Good Parts",
+            "subtitle": "Unearthing the Excellence in JavaScript",
+            "isbn13": "9780596517748",
+            "price": "$5.34",
+            "image": "https://itbook.store/img/books/9780596517748.png",
+            "url": "https://itbook.store/books/9780596517748"
+        },
+        {
+            "title": "Head First JavaScript",
+            "subtitle": "A Learner's Companion to JavaScript",
+            "isbn13": "9780596527747",
+            "price": "$5.92",
+            "image": "https://itbook.store/img/books/9780596527747.png",
+            "url": "https://itbook.store/books/9780596527747"
+        },
+        {
+            "title": "JavaScript Creativity",
+            "subtitle": "Exploring the Modern Capabilities of JavaScript and HTML5",
+            "isbn13": "9781430259442",
+            "price": "$30.64",
+            "image": "https://itbook.store/img/books/9781430259442.png",
+            "url": "https://itbook.store/books/9781430259442"
+        },
+        {
+            "title": "JavaScript for PHP Developers",
+            "subtitle": "A Concise Guide to Mastering JavaScript",
+            "isbn13": "9781449320195",
+            "price": "$10.50",
+            "image": "https://itbook.store/img/books/9781449320195.png",
+            "url": "https://itbook.store/books/9781449320195"
+        },
+        {
+            "title": "Learning JavaScript Design Patterns",
+            "subtitle": "A JavaScript and jQuery Developer's Guide",
+            "isbn13": "9781449331818",
+            "price": "$7.94",
+            "image": "https://itbook.store/img/books/9781449331818.png",
+            "url": "https://itbook.store/books/9781449331818"
+        },
+        {
+            "title": "The Problem with Native JavaScript APIs",
+            "subtitle": "Why reliance on native JavaScript APIs leads to disadvantages",
+            "isbn13": "9781449339951",
+            "price": "$0.00",
+            "image": "https://itbook.store/img/books/9781449339951.png",
+            "url": "https://itbook.store/books/9781449339951"
+        },
+        {
+            "title": "JavaScript Enlightenment",
+            "subtitle": "From Library User to JavaScript Developer",
+            "isbn13": "9781449342883",
+            "price": "$9.93",
+            "image": "https://itbook.store/img/books/9781449342883.png",
+            "url": "https://itbook.store/books/9781449342883"
+        },
+        {
+            "title": "JavaScript Testing with Jasmine",
+            "subtitle": "JavaScript Behavior-Driven Development",
+            "isbn13": "9781449356378",
+            "price": "$9.22",
+            "image": "https://itbook.store/img/books/9781449356378.png",
+            "url": "https://itbook.store/books/9781449356378"
+        }
+    ]
+}

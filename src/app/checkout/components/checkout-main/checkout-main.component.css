@@ -1,0 +1,10 @@
+.nxt-btn {
+  float: right;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+.prv-btn {
+  float: left;
+  margin-top: 20px;
+  margin-left: 20px
+}

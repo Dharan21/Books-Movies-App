@@ -1,0 +1,16 @@
+<div class="example-form">
+  <div style="margin-bottom:10px;color: rgba(0, 0, 0, 0.53);">
+    An otp has been sent to your email-id. Please verify it.
+  </div>
+  <mat-form-field style="max-width: fit-content;" appearance="fill">
+    <mat-label>OTP</mat-label>
+    <input matInput [(ngModel)]="otp">
+  </mat-form-field>
+  <div *ngIf="!isTrue && firstClick" style="color: red;">
+    OTP is <strong>Wrong</strong>
+  </div>
+  <div *ngIf="isTrue" style="color:#673AB7;">
+    OTP is <strong>Verified.</strong>
+  </div>
+  <button mat-raised-button [disabled]="otp.length !== 6" color="primary" (click)="verifyOTP()">Verify</button>
+</div>

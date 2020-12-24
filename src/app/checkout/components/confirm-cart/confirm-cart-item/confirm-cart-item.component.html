@@ -1,0 +1,109 @@
+<div *ngIf="isMovie">
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <div style="margin: auto 0;">{{ movie.title | sLength:20 }}</div>
+        <mat-chip-list aria-label="movie" style="margin-left:10px;display: flex;">
+          <mat-chip color="accent" selected>Movie</mat-chip>
+        </mat-chip-list>
+      </mat-panel-title>
+      <mat-panel-description style="margin: auto 0;justify-content: flex-end;margin-right: 20px;">
+        <mat-chip-list aria-label="movie" style="margin-left:10px;display: flex;">
+          <mat-chip matTooltip="Price" color="warn" selected>
+            {{ movie.price | currency:"INR":"symbol":"1.0-1" }}</mat-chip>
+          <div style="margin: auto 0;"> X </div>
+          <mat-chip matTooltip="Quantity" color="warn" selected>
+            {{ movie.quantity }}</mat-chip>
+        </mat-chip-list>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <mat-card class="card">
+      <img mat-card-image [src]="getImgSrc()" [matTooltip]="movie.title" [alt]="movie.title" style="max-height: 100%;">
+      <mat-card-header class="card-header">
+        <mat-card-title [matTooltip]="movie.title">{{ movie.title | sLength:30 }}</mat-card-title>
+        <mat-card-subtitle matTooltip="Year of Release" style="margin-bottom: 6px;">
+          {{ movie.release_date | date:"yyyy"}}</mat-card-subtitle>
+        <mat-card-subtitle matTooltip="Geners">
+          <span *ngFor="let genre of movie.genres" style="margin-right: 2px;">{{ genre }}</span>
+        </mat-card-subtitle>
+        <mat-card-subtitle style="display: flex;">
+          <div style="margin-top: 4px;">IMDB:</div>
+          <div *ngFor="let number of ratings">
+            <mat-icon *ngIf="number === 1" aria-hidden="false" color="accent">star</mat-icon>
+            <mat-icon *ngIf="number === 0" svgIcon="halfStar" aria-hidden="false" color="accent"></mat-icon>
+          </div>
+        </mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>Overview</p>
+        <p [matTooltip]="movie.overview" style="color: rgba(0, 0, 0, 0.54);margin-right: 0;">
+          {{movie.overview | sLength: 100}}
+        </p>
+        <button mat-button color="warn" (click)="onRemoveFromCart()">Remove From Cart</button>
+      </mat-card-content>
+    </mat-card>
+
+  </mat-expansion-panel>
+</div>
+<div *ngIf="!isMovie">
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <div style="margin: auto 0;">{{ book.title | sLength:20 }}</div>
+        <mat-chip-list aria-label="book" style="margin-left:10px;display: flex;">
+          <mat-chip color="accent" selected>Book</mat-chip>
+        </mat-chip-list>
+      </mat-panel-title>
+      <mat-panel-description style="margin: auto 0;justify-content: flex-end;margin-right: 20px;">
+        <mat-chip-list aria-label="book" style="margin-left:10px;display: flex;">
+          <mat-chip matTooltip="Price" color="warn" selected>
+            {{ book.price | currency:"INR":"symbol":"1.0-1" }}</mat-chip>
+          <div style="margin: auto 0;"> X </div>
+          <mat-chip matTooltip="Quantity" color="warn" selected>
+            {{ book.quantity }}</mat-chip>
+        </mat-chip-list>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <mat-card class="card">
+      <img mat-card-image [src]="book.image" [matTooltip]="book.title" [alt]="book.title" style="max-height: 100%;">
+      <mat-card-header class="card-header">
+        <mat-card-title style="margin-top: 12px;" [matTooltip]="book.title">{{ book.title | sLength:30 }}
+        </mat-card-title>
+        <mat-card-subtitle matTooltip="ISBN" class="card-subtitle">{{ book.isbn13 }}</mat-card-subtitle>
+        <mat-card-subtitle *ngIf="book.publisher" matTooltip="Publisher" class="card-subtitle">
+          <span>Publisher: </span>
+          {{ book.publisher }}
+        </mat-card-subtitle>
+        <mat-card-subtitle matTooltip="Authors" class="card-subtitle">
+          <span>Author: </span>
+          <span *ngFor="let author of book.authors" style="margin-right: 2px;">{{ author }}</span>
+        </mat-card-subtitle>
+        <mat-card-subtitle *ngIf="book.numberOfPages > 0" matTooltip="Number of pages" class="card-subtitle">
+          <span>Number of Pages: </span>
+          {{ book.numberOfPages }}
+        </mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content style="margin-top: 12px;">
+        <p *ngIf="book.subject" style="margin-bottom: 1px;">Subject:
+          <span [matTooltip]="book.subject" class="card-content">
+            {{book.subject}}
+          </span>
+        </p>
+        <p *ngIf="book.subtitle" style="margin-bottom: 1px;">Subtitle:
+          <span [matTooltip]="book.subtitle" class="card-content">
+            {{book.subtitle}}
+          </span>
+        </p>
+        <p style="margin-bottom: 1px;">Published Year:
+          <span class="card-content">
+            {{book.publishDate | date:"yyyy"}}
+          </span>
+        </p>
+        <button mat-button color="warn" (click)="onRemoveFromCart()">Remove From Cart</button>
+      </mat-card-content>
+    </mat-card>
+
+  </mat-expansion-panel>
+</div>

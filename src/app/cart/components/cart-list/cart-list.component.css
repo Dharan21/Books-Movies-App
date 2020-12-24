@@ -1,0 +1,11 @@
+.heading {
+  font-size: x-large;
+  font-weight: 500;
+}
+table {
+  width: 100%;
+}
+
+th, .bold {
+  font-weight: bold;
+}

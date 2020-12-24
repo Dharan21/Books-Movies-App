@@ -1,0 +1,87 @@
+{
+    "error": "0",
+    "total": "50",
+    "page": "4",
+    "books": [
+        {
+            "title": "Building Enterprise JavaScript Applications",
+            "subtitle": "Learn to build and deploy robust JavaScript applications using Cucumber, Mocha, Jenkins, Docker, and Kubernetes",
+            "isbn13": "9781788477321",
+            "price": "$44.99",
+            "image": "https://itbook.store/img/books/9781788477321.png",
+            "url": "https://itbook.store/books/9781788477321"
+        },
+        {
+            "title": "Learning JavaScript Data Structures and Algorithms, 3rd Edition",
+            "subtitle": "Write complex and powerful JavaScript code using the latest ECMAScript",
+            "isbn13": "9781788623872",
+            "price": "$44.99",
+            "image": "https://itbook.store/img/books/9781788623872.png",
+            "url": "https://itbook.store/books/9781788623872"
+        },
+        {
+            "title": "Modern JavaScript Web Development Cookbook",
+            "subtitle": "Easy solutions to common and everyday JavaScript development problems",
+            "isbn13": "9781788992749",
+            "price": "$40.00",
+            "image": "https://itbook.store/img/books/9781788992749.png",
+            "url": "https://itbook.store/books/9781788992749"
+        },
+        {
+            "title": "Hands-On Robotics with JavaScript",
+            "subtitle": "Build robotic projects using Johnny-Five and control hardware with JavaScript and Raspberry Pi",
+            "isbn13": "9781789342055",
+            "price": "$39.99",
+            "image": "https://itbook.store/img/books/9781789342055.png",
+            "url": "https://itbook.store/books/9781789342055"
+        },
+        {
+            "title": "Learn Blockchain Programming with JavaScript",
+            "subtitle": "Build your very own Blockchain and decentralized network with JavaScript and Node.js",
+            "isbn13": "9781789618822",
+            "price": "$31.99",
+            "image": "https://itbook.store/img/books/9781789618822.png",
+            "url": "https://itbook.store/books/9781789618822"
+        },
+        {
+            "title": "The JavaScript Workshop",
+            "subtitle": "A New, Interactive Approach to Learning JavaScript",
+            "isbn13": "9781838641917",
+            "price": "$39.36",
+            "image": "https://itbook.store/img/books/9781838641917.png",
+            "url": "https://itbook.store/books/9781838641917"
+        },
+        {
+            "title": "Object-Oriented JavaScript",
+            "subtitle": "Create scalable, reusable high-quality JavaScript applications, and libraries",
+            "isbn13": "9781847194145",
+            "price": "$23.99",
+            "image": "https://itbook.store/img/books/9781847194145.png",
+            "url": "https://itbook.store/books/9781847194145"
+        },
+        {
+            "title": "JavaScript Testing",
+            "subtitle": "Test and debug JavaScript the easy way",
+            "isbn13": "9781849510004",
+            "price": "$26.99",
+            "image": "https://itbook.store/img/books/9781849510004.png",
+            "url": "https://itbook.store/books/9781849510004"
+        },
+        {
+            "title": "Developing Windows Store Apps with HTML5 and JavaScript",
+            "subtitle": "Learn the key concepts of developing Windows Store apps using HTML5 and JavaScript",
+            "isbn13": "9781849687102",
+            "price": "$14.99",
+            "image": "https://itbook.store/img/books/9781849687102.png",
+            "url": "https://itbook.store/books/9781849687102"
+        },
+        {
+            "title": "Google Maps JavaScript API Cookbook",
+            "subtitle": "Over 50 recipes to help you create web maps and GIS web applications using the Google Maps JavaScript API",
+            "isbn13": "9781849698825",
+            "price": "$26.99",
+            "image": "https://itbook.store/img/books/9781849698825.png",
+            "url": "https://itbook.store/books/9781849698825"
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+.header-item {
+  padding: 10px 20px;
+  cursor: pointer;
+  line-height: 1;
+  font-size: medium;
+}
+.header-item:hover {
+  background-color: #4E2C8A;
+  border-radius: 4px;
+}
+.header-spacer {
+  flex: 1 1 auto;
+}
+.active{
+  background-color: #4E2C8A;
+}

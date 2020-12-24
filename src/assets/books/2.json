@@ -1,0 +1,87 @@
+{
+    "error": "0",
+    "total": "50",
+    "page": "2",
+    "books": [
+        {
+            "title": "HTML5 and JavaScript Projects, 2nd edition",
+            "subtitle": "Build on your Basic Knowledge of HTML5 and JavaScript to Create Substantial HTML5 Applications",
+            "isbn13": "9781484238639",
+            "price": "$28.32",
+            "image": "https://itbook.store/img/books/9781484238639.png",
+            "url": "https://itbook.store/books/9781484238639"
+        },
+        {
+            "title": "Beginning JavaScript, 3nd Edition",
+            "subtitle": "The Ultimate Guide to Modern JavaScript Development",
+            "isbn13": "9781484243947",
+            "price": "$19.02",
+            "image": "https://itbook.store/img/books/9781484243947.png",
+            "url": "https://itbook.store/books/9781484243947"
+        },
+        {
+            "title": "Building Web Applications with .NET Core 2.1 and JavaScript, 2nd edition",
+            "subtitle": "Leveraging Modern JavaScript Frameworks",
+            "isbn13": "9781484253519",
+            "price": "$32.57",
+            "image": "https://itbook.store/img/books/9781484253519.png",
+            "url": "https://itbook.store/books/9781484253519"
+        },
+        {
+            "title": "Practical Modern JavaScript",
+            "subtitle": "Dive into ES6 and the Future of JavaScript",
+            "isbn13": "9781491943533",
+            "price": "$40.54",
+            "image": "https://itbook.store/img/books/9781491943533.png",
+            "url": "https://itbook.store/books/9781491943533"
+        },
+        {
+            "title": "Simplifying JavaScript",
+            "subtitle": "Writing Modern JavaScript with ES5, ES6, and Beyond",
+            "isbn13": "9781680502886",
+            "price": "$39.44",
+            "image": "https://itbook.store/img/books/9781680502886.png",
+            "url": "https://itbook.store/books/9781680502886"
+        },
+        {
+            "title": "Learning JavaScriptMVC",
+            "subtitle": "Learn to build well-structured JavaScript web applications using JavaScriptMVC",
+            "isbn13": "9781782160205",
+            "price": "$14.99",
+            "image": "https://itbook.store/img/books/9781782160205.png",
+            "url": "https://itbook.store/books/9781782160205"
+        },
+        {
+            "title": "Getting Started with Meteor.js JavaScript Framework",
+            "subtitle": "Develop modern web applications in Meteor, one of the hottest new JavaScript platforms",
+            "isbn13": "9781782160823",
+            "price": "$9.99",
+            "image": "https://itbook.store/img/books/9781782160823.png",
+            "url": "https://itbook.store/books/9781782160823"
+        },
+        {
+            "title": "Learning Three.js: The JavaScript 3D Library for WebGL",
+            "subtitle": "Create and animate stunning 3D graphics using the open source Three.js JavaScript library",
+            "isbn13": "9781782166283",
+            "price": "$29.99",
+            "image": "https://itbook.store/img/books/9781782166283.png",
+            "url": "https://itbook.store/books/9781782166283"
+        },
+        {
+            "title": "Test-Driven JavaScript Development",
+            "subtitle": "Learn JavaScript test-driven development using popular frameworks and tools",
+            "isbn13": "9781782174929",
+            "price": "$39.99",
+            "image": "https://itbook.store/img/books/9781782174929.png",
+            "url": "https://itbook.store/books/9781782174929"
+        },
+        {
+            "title": "Mastering JavaScript Promises",
+            "subtitle": "Discover and explore the world of promises, one of JavaScript's most powerful concepts",
+            "isbn13": "9781783985500",
+            "price": "$39.99",
+            "image": "https://itbook.store/img/books/9781783985500.png",
+            "url": "https://itbook.store/books/9781783985500"
+        }
+    ]
+}

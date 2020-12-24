@@ -1,0 +1,87 @@
+{
+    "error": "0",
+    "total": "50",
+    "page": "3",
+    "books": [
+        {
+            "title": "Mastering JavaScript Design Patterns",
+            "subtitle": "Discover how to use JavaScript design patterns to create powerful applications with reliable and maintainable code",
+            "isbn13": "9781783987986",
+            "price": "$27.49",
+            "image": "https://itbook.store/img/books/9781783987986.png",
+            "url": "https://itbook.store/books/9781783987986"
+        },
+        {
+            "title": "JavaScript Security",
+            "subtitle": "Learn JavaScript security to make your web applications more secure",
+            "isbn13": "9781783988006",
+            "price": "$14.99",
+            "image": "https://itbook.store/img/books/9781783988006.png",
+            "url": "https://itbook.store/books/9781783988006"
+        },
+        {
+            "title": "Learning Behavior-driven Development with JavaScript",
+            "subtitle": "Create powerful yet simple-to-code BDD test suites in JavaScript using the most popular tools in the community",
+            "isbn13": "9781784392642",
+            "price": "$29.99",
+            "image": "https://itbook.store/img/books/9781784392642.png",
+            "url": "https://itbook.store/books/9781784392642"
+        },
+        {
+            "title": "Mastering JavaScript High Performance",
+            "subtitle": "Master the art of building, deploying, and optimizing faster web applications with JavaScript",
+            "isbn13": "9781784397296",
+            "price": "$35.99",
+            "image": "https://itbook.store/img/books/9781784397296.png",
+            "url": "https://itbook.store/books/9781784397296"
+        },
+        {
+            "title": "Functional Programming in JavaScript",
+            "subtitle": "Unlock the powers of functional programming hidden within JavaScript to build smarter, cleaner, and more reliable web apps",
+            "isbn13": "9781784398224",
+            "price": "$23.99",
+            "image": "https://itbook.store/img/books/9781784398224.png",
+            "url": "https://itbook.store/books/9781784398224"
+        },
+        {
+            "title": "Mastering JavaScript",
+            "subtitle": "Explore and master modern JavaScript techniques in order to build large-scale web applications",
+            "isbn13": "9781785281341",
+            "price": "$35.99",
+            "image": "https://itbook.store/img/books/9781785281341.png",
+            "url": "https://itbook.store/books/9781785281341"
+        },
+        {
+            "title": "Jasmine JavaScript Testing, 2nd Edition",
+            "subtitle": "Test your JavaScript applications efficiently using Jasmine and React.js",
+            "isbn13": "9781785282041",
+            "price": "$27.99",
+            "image": "https://itbook.store/img/books/9781785282041.png",
+            "url": "https://itbook.store/books/9781785282041"
+        },
+        {
+            "title": "Modern JavaScript Applications",
+            "subtitle": "An example-driven guide that explores the world of modern web development with JavaScript",
+            "isbn13": "9781785881442",
+            "price": "$34.99",
+            "image": "https://itbook.store/img/books/9781785881442.png",
+            "url": "https://itbook.store/books/9781785881442"
+        },
+        {
+            "title": "ArcGIS for JavaScript Developers by Example",
+            "subtitle": "A practical guide to get you creating powerful mapping applications using the rich set of features provided by the ArcGIS JavaScript API",
+            "isbn13": "9781785888663",
+            "price": "$29.92",
+            "image": "https://itbook.store/img/books/9781785888663.png",
+            "url": "https://itbook.store/books/9781785888663"
+        },
+        {
+            "title": "JavaScript Concurrency",
+            "subtitle": "Build better software with concurrent JavaScript programming, and unlock a more efficient and forward thinking approach to web development",
+            "isbn13": "9781785889233",
+            "price": "$35.99",
+            "image": "https://itbook.store/img/books/9781785889233.png",
+            "url": "https://itbook.store/books/9781785889233"
+        }
+    ]
+}

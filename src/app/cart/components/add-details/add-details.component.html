@@ -1,0 +1,132 @@
+<div class="container">
+  <mat-list>
+    <mat-list-item class="heading">Add Details</mat-list-item>
+  </mat-list>
+  <mat-divider></mat-divider>
+  <mat-accordion>
+    <div style="margin-top: 20px;">
+      <mat-accordion class="example-headers-align">
+        <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Personal Info
+            </mat-panel-title>
+            <mat-panel-description>
+              Type your name and email
+              <mat-icon>account_circle</mat-icon>
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <form [formGroup]="pdForm">
+            <mat-form-field>
+              <mat-label>First name</mat-label>
+              <input matInput formControlName="name" [errorStateMatcher]="matcher" placeholder="Ex. Chandler Bing">
+              <mat-error *ngIf="pdForm.controls.name.hasError('required')">
+                First name is <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+
+            <mat-form-field>
+              <mat-label>Email</mat-label>
+              <input matInput formControlName="email" [errorStateMatcher]="matcher" placeholder="Ex. pat@example.com">
+              <mat-error *ngIf="pdForm.controls.email.hasError('email') && !pdForm.controls.email.hasError('required')">
+                Please enter a valid email address
+              </mat-error>
+              <mat-error *ngIf="pdForm.controls.email.hasError('required')">
+                Email is <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+
+            <mat-action-row>
+              <button mat-button [disabled]="!pdForm.valid" color="primary" (click)="onPDFormSubmit()">Next</button>
+            </mat-action-row>
+          </form>
+        </mat-expansion-panel>
+
+        <mat-expansion-panel [expanded]="step === 1" (opened)="setStep(1)" hideToggle>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Address Info
+            </mat-panel-title>
+            <mat-panel-description>
+              Type your address information
+              <mat-icon>map</mat-icon>
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <form [formGroup]="addressForm">
+            <mat-form-field>
+              <mat-label>Street</mat-label>
+              <input matInput formControlName="street" [errorStateMatcher]="matcher"
+                placeholder="Ex. 4-Galaxy Appartment">
+              <mat-error *ngIf="addressForm.controls.street.hasError('required')">
+                Street is <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+
+            <mat-form-field>
+              <mat-label>City</mat-label>
+              <input matInput formControlName="city" [errorStateMatcher]="matcher" placeholder="Ex. New York">
+              <mat-error *ngIf="addressForm.controls.city.hasError('required')">
+                City is <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+
+            <mat-form-field>
+              <mat-label>Zip code</mat-label>
+              <input matInput formControlName="zipcode" [errorStateMatcher]="matcher" placeholder="Ex. 123456">
+              <mat-error *ngIf="addressForm.controls.zipcode.hasError('required')">
+                Zip code is <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+
+            <mat-form-field>
+              <mat-label>Country</mat-label>
+              <input matInput formControlName="country" [errorStateMatcher]="matcher" placeholder="Ex. India">
+              <mat-error *ngIf="addressForm.controls.country.hasError('required')">
+                Country is <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+
+            <mat-action-row>
+              <button mat-button color="warn" (click)="prevStep()">Previous</button>
+              <button mat-button color="primary" [disabled]="!addressForm.valid"
+                (click)="onAddressFormSubmit()">Next</button>
+            </mat-action-row>
+          </form>
+        </mat-expansion-panel>
+
+        <mat-expansion-panel [expanded]="step === 2" (opened)="setStep(2)" hideToggle>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Payment Info
+            </mat-panel-title>
+            <mat-panel-description>
+              Type your payment information
+              <mat-icon>payment</mat-icon>
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+
+          <form [formGroup]="paymentForm">
+            <mat-form-field>
+              <mat-label>UPI Id</mat-label>
+              <input matInput formControlName="upi" [errorStateMatcher]="matcher" placeholder="Ex. 123456789012">
+              <mat-error *ngIf="paymentForm.controls.upi.hasError('required')">
+                UPI Id is <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+
+            <mat-action-row>
+              <button mat-button color="warn" (click)="prevStep()">Previous</button>
+              <button mat-button [disabled]="!paymentForm.valid" color="primary"
+                (click)="onPaymentFormSubmit()">Next</button>
+            </mat-action-row>
+          </form>
+        </mat-expansion-panel>
+
+      </mat-accordion>
+    </div>
+  </mat-accordion>
+  <div class="end-div">
+    <button mat-raised-button [disabled]="step < 3" color="primary" (click)="onCheckout()">CHECKOUT</button>
+  </div>
+
+</div>

@@ -1,0 +1,49 @@
+<mat-card *ngIf="isMovie" class="card">
+  <img mat-card-image [src]="getImgSrc()" [matTooltip]="movie.title" [alt]="movie.title" style="max-height: 100%;">
+  <mat-card-header class="card-header">
+    <mat-card-title [matTooltip]="movie.title">{{ movie.title | sLength:30 }}</mat-card-title>
+    <mat-card-subtitle matTooltip="Year of Release">{{ movie.release_date | date:"yyyy"}}</mat-card-subtitle>
+    <mat-card-subtitle style="display: flex;">
+      <div style="margin-top: 4px;">IMDB:</div>
+      <div *ngFor="let number of ratings">
+        <mat-icon *ngIf="number === 1" aria-hidden="false" color="accent">star</mat-icon>
+        <mat-icon *ngIf="number === 0" svgIcon="halfStar" aria-hidden="false" color="accent"></mat-icon>
+      </div>
+    </mat-card-subtitle>
+    <mat-card-subtitle>
+      <mat-chip-list aria-label="Price">
+        <mat-chip matTooltip="Price" style="position: absolute;" color="accent" selected>
+          {{ movie.price | currency:"INR":"symbol":"1.0-1" }}</mat-chip>
+      </mat-chip-list>
+    </mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-actions class="card-action-sec">
+    <button mat-button color="warn" (click)="onRemoveFromWishlist()">Remove From Wishlist</button>
+    <button mat-button *ngIf="movie.quantity > 0" [disabled]="movie.quantity === 0" color="primary" (click)="onAddToCart()">Add To Cart</button>
+    <mat-chip-list *ngIf="movie.quantity === 0" aria-label="Fish selection" style="margin: 1px auto;">
+      <mat-chip color="warn" selected>Sold Out</mat-chip>
+    </mat-chip-list>
+  </mat-card-actions>
+</mat-card>
+<!-- ------------------------------------------------ -->
+<mat-card *ngIf="!isMovie" class="card">
+  <img mat-card-image [src]="book.image" [matTooltip]="book.title" [alt]="book.title" style="max-height: 100%;">
+  <mat-card-header class="card-header">
+    <mat-card-title style="margin-top: 12px;" [matTooltip]="book.title">{{ book.title | sLength:30 }}</mat-card-title>
+    <mat-card-subtitle matTooltip="ISBN">{{ book.isbn13 }}</mat-card-subtitle>
+    <mat-card-subtitle>
+      <mat-chip-list aria-label="Price">
+        <mat-chip matTooltip="Price" color="accent" selected>
+          {{ book.price | currency:"INR":"symbol":"1.0-1" }}</mat-chip>
+      </mat-chip-list>
+    </mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-actions class="card-action-sec">
+    <button mat-button color="warn" (click)="onRemoveFromWishlist()">Remove From Wishlist</button>
+    <button mat-button *ngIf="book.quantity > 0" [disabled]="book.quantity === 0" color="primary" (click)="onAddToCart()">Add To Cart</button>
+    <mat-chip-list *ngIf="book.quantity === 0" aria-label="Fish selection" style="margin: 1px auto;">
+      <mat-chip color="warn" selected>Sold Out</mat-chip>
+    </mat-chip-list>
+  </mat-card-actions>
+</mat-card>
+

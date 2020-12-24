@@ -1,0 +1,21 @@
+
+.container {
+  margin: 0 100px;
+}
+
+
+@media only screen and (min-width: 1024px) {
+  .container {
+    margin: 0 200px;
+  }
+}
+.total-div {
+  display: flex;
+  justify-content: flex-end;
+  margin: 20px 20px 0 0;
+}
+
+.total-div div {
+  font-weight: 500;
+  font-size: large;
+}

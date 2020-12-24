@@ -1,0 +1,48 @@
+<mat-card *ngIf="isMovie" class="card">
+  <img mat-card-image [routerLink]="['/details', 'movie', currentPage, movie.id]" [src]="getImgSrc()" [alt]="movie.title" style="max-width: 100%;cursor: pointer;">
+  <mat-card-header style="width: 100%;">
+    <mat-card-title [matTooltip]="movie.title">{{ movie.title | sLength:17 }}</mat-card-title>
+    <mat-card-subtitle>{{ movie.release_date | date:'yyyy'}}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-actions style="width: 100%;">
+    <button class="cart-action" matRipple matRippleCentered="true" [disabled]="isWishlistDisabled"
+      (click)="onAddToWishlist()">
+      <mat-icon style="cursor: pointer;" aria-hidden="false" aria-label="Wishlist"
+        [color]="isWishlistDisabled ? 'warn' : 'primary'" matTooltip="Add to Wishlist"
+        [matBadge]="isWishlistDisabled ?  '': '+'" matBadgePosition="after" matBadgeColor="accent">favorite</mat-icon>
+    </button>
+    <button class="cart-action" [ngClass]="{'sold-out': movie.quantity === 0}" matRipple matRippleCentered="true"
+      [disabled]="movie.quantity === 0" (click)="onAddToCart()">
+      <mat-icon *ngIf="movie.quantity > 0" style="cursor: pointer;" svgIcon="cart" aria-hidden="false"
+        aria-label="Wishlist" color="primary" matTooltip="Add to Cart" matBadge="+" matBadgePosition="after"
+        matBadgeColor="accent"></mat-icon>
+      <mat-chip-list *ngIf="movie.quantity === 0" aria-label="Fish selection">
+        <mat-chip color="warn" selected>Sold Out</mat-chip>
+      </mat-chip-list>
+    </button>
+  </mat-card-actions>
+</mat-card>
+<mat-card *ngIf="!isMovie" class="card">
+  <img mat-card-image [routerLink]="['/details', 'book', currentPage, book.isbn13]" [src]="book.image" [alt]="book.title" style="max-width: 100%; cursor: pointer;">
+  <mat-card-header style="width: 100%;">
+    <mat-card-title [matTooltip]="book.title">{{ book.title | sLength:13 }}</mat-card-title>
+    <mat-card-subtitle matTooltip="ISBN">{{ book.isbn13 }}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-actions style="width: 100%;">
+    <button class="cart-action" matRipple matRippleCentered="true" [disabled]="isWishlistDisabled"
+      (click)="onAddToWishlist()">
+      <mat-icon style="cursor: pointer;" aria-hidden="false" aria-label="Wishlist"
+        [color]="isWishlistDisabled ? 'warn' : 'primary'" matTooltip="Add to Wishlist"
+        [matBadge]="isWishlistDisabled ?  '': '+'" matBadgePosition="after" matBadgeColor="accent">favorite</mat-icon>
+    </button>
+    <button class="cart-action" [ngClass]="{'sold-out': book.quantity === 0}" matRipple matRippleCentered="true"
+      [disabled]="book.quantity === 0" (click)="onAddToCart()">
+      <mat-icon *ngIf="book.quantity > 0" style="cursor: pointer;" svgIcon="cart" aria-hidden="false"
+        aria-label="Wishlist" color="primary" matTooltip="Add to Cart" matBadge="+" matBadgePosition="after"
+        matBadgeColor="accent"></mat-icon>
+      <mat-chip-list *ngIf="book.quantity === 0" aria-label="Fish selection">
+        <mat-chip color="warn" selected>Sold Out</mat-chip>
+      </mat-chip-list>
+    </button>
+  </mat-card-actions>
+</mat-card>

@@ -1,0 +1,29 @@
+<mat-horizontal-stepper labelPosition="bottom" #stepper>
+  <mat-step>
+    <ng-template matStepLabel>Confirm Cart Items</ng-template>
+    <app-confirm-cart></app-confirm-cart>
+    <div class="nxt-btn">
+      <button mat-button matStepperNext color="primary">Next</button>
+    </div>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Confirm Your Details</ng-template>
+    <app-confirm-details></app-confirm-details>
+    <div class="prv-btn">
+      <button mat-button matStepperPrevious color="warn">Back</button>
+    </div>
+    <div class="nxt-btn">
+      <button mat-button matStepperNext color="primary">Next</button>
+    </div>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>OTP Verification</ng-template>
+    <app-verify-otp (confirmed)="optVerified()"></app-verify-otp>
+    <div class="prv-btn">
+      <button mat-button matStepperPrevious color="warn">Back</button>
+    </div>
+    <div class="nxt-btn">
+      <button mat-raised-button [disabled]="!isOptVerified" (click)="openDialog()" color="primary">CHECKOUT</button>
+    </div>
+  </mat-step>
+</mat-horizontal-stepper>

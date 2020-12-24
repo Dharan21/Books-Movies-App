@@ -1,0 +1,16 @@
+<div *ngIf="isMovieList">
+  <div *ngIf="movieWishlist.length === 0">
+    <h2>No movies in wishlist!</h2>
+  </div>
+  <div style="margin: 0 60px;">
+    <app-list-item *ngFor="let movie of movieWishlist" [isMovie]="true" [movie]="movie"></app-list-item>
+  </div>
+</div>
+<div *ngIf="!isMovieList">
+  <div *ngIf="bookWishList.length === 0">
+    <h2>No books in wishlist!</h2>
+  </div>
+  <div style="margin: 0 60px;">
+    <app-list-item *ngFor="let book of bookWishList" [isMovie]="false" [book]="book"></app-list-item>
+  </div>
+</div>

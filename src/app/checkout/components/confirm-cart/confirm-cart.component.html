@@ -1,0 +1,16 @@
+<div class="container">
+  <mat-accordion>
+    <app-confirm-cart-item *ngFor="let book of books" [isMovie]="false" [book]="book">
+    </app-confirm-cart-item>
+    <app-confirm-cart-item *ngFor="let movie of movies" [isMovie]="true" [movie]="movie">
+    </app-confirm-cart-item>
+  </mat-accordion>
+  <div *ngIf="books.length + movies.length > 0" class="total-div">
+    <div>
+      Total:&nbsp;
+    </div>
+    <div style="margin:0 2px;color: rgba(0, 0, 0, 0.54);">
+      {{ calculateTotal() | currency:"INR":"symbol":"1.0-1" }}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+<mat-toolbar style="position: fixed;top: 0;z-index: 1;" color="primary">
+  <mat-toolbar-row>
+    <a class="header-item" [routerLink]="['/book', getLatestBookPage()]" routerLinkActive="active" matRipple>Books</a>
+    <a class="header-item" [routerLink]="['/movie', getLatestMoviePage()]" routerLinkActive="active"
+      matRipple>Movies</a>
+    <span class="header-spacer"></span>
+    <a class="header-item" routerLink="/wishlist" routerLinkActive="active" matRipple matTooltip="Wishlist">
+      <mat-icon aria-hidden="false" aria-label="Wishlist" [matBadge]="wishlistCount ? wishlistCount: ''"
+        matBadgePosition="after" matBadgeColor="accent">favorite</mat-icon>
+    </a>
+    <a class="header-item" routerLink="/cart" routerLinkActive="active" matRipple matTooltip="Cart">
+      <mat-icon svgIcon="cart" aria-hidden="false" aria-label="Cart" [matBadge]="cartItemsCount ? cartItemsCount: ''"
+        matBadgePosition="after" matBadgeColor="accent"></mat-icon>
+    </a>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<ngx-spinner></ngx-spinner>

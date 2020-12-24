@@ -1,0 +1,22 @@
+<div class="grid-box">
+  <div *ngIf="displayMovies">
+    <mat-grid-list [cols]="columnNum" rowHeight="630px" gutterSize="10" role="list">
+      <mat-grid-tile *ngFor="let movie of movies" role="listitem">
+        <app-grid-item [isMovie]="true" [movie]="movie">
+        </app-grid-item>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+  <div *ngIf="!displayMovies">
+    <mat-grid-list [cols]="columnNum" rowHeight="500px" gutterSize="10" role="list">
+      <mat-grid-tile *ngFor="let book of books" role="listitem">
+        <app-grid-item [isMovie]="false" [book]="book">
+        </app-grid-item>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+  <mat-paginator [length]="totalResults" [pageIndex]="page-1" [pageSize]="displayMovies ? movies.length : books.length"
+    (page)="onPageChange($event)">
+  </mat-paginator>
+</div>
+<ngx-spinner></ngx-spinner>

@@ -1,0 +1,134 @@
+<ngx-spinner></ngx-spinner>
+
+<div *ngIf="isMovie && hasMovieInPage" class="detail-info container">
+  <div class="row content-center">
+    <div class="img-container">
+      <img [src]="getImgSrc()" [alt]="movie.title" style="width: 100%;">
+    </div>
+  </div>
+  <div>
+
+    <div class="row" style="flex-direction: column;">
+      <div style="display: flex;">
+        <div [matTooltip]="movie.title" class="title">
+          {{movie.title | sLength:40}} ({{ movie.release_date | date:"yyyy" }})
+        </div>
+        <mat-chip-list style="line-height: 1;">
+          <mat-chip class="chip-style" color="primary" selected>Movie</mat-chip>
+        </mat-chip-list>
+      </div>
+    </div>
+
+    <div style="display:flex">
+      <div class="author" *ngIf="movie.genres && movie.genres.length > 0" style="max-width: 50%;"><button mat-button
+          color="primary" matTooltip="Genre" *ngFor="let genre of movie.genres" style="margin-right: 3px;">{{genre}}
+        </button>
+      </div>
+      <mat-chip-list style="width: 50%;margin-top: 2px;" aria-label="Price">
+        <div class="author" style="margin-left: 3px;"> Only At: </div>
+        <mat-chip matTooltip="Price" color="accent" selected>
+          {{ movie.price | currency:"INR":"symbol":"1.0-1" }}</mat-chip>
+      </mat-chip-list>
+    </div>
+
+    <div class="row">
+      <div class="author" style="margin-top: 4px;">IMDB:</div>
+      <div *ngFor="let number of ratings">
+        <mat-icon *ngIf="number === 1" aria-hidden="false" color="accent">star</mat-icon>
+        <mat-icon *ngIf="number === 0" svgIcon="halfStar" aria-hidden="false" color="accent"></mat-icon>
+      </div>
+    </div>
+
+    <div class="author" *ngIf="movie.productionCompanies && movie.productionCompanies.length > 0">By <button mat-button
+        color="primary" matTooltip="Production Companies" *ngFor="let company of movie.productionCompanies"
+        style="margin-right: 3px;">{{company}} </button>
+    </div>
+
+    <div class="subtitle" style="margin-top: 8px;" *ngIf="movie.tagline">Tagline: <span
+        matTooltip="Caption">{{movie.tagline}}</span></div>
+
+    <div class="subtitle" style="margin-top: 8px;" *ngIf="movie.overview">Overview</div>
+    <p *ngIf="movie.overview" style="color: rgba(0, 0, 0, 0.53);text-align: left;" matTooltip="Overview">
+      {{movie.overview}}</p>
+
+    <div class="row" style="justify-content:space-between;">
+      <div class="btn-section">
+        <button mat-button color="primary" class="cart-action" style="margin-top: 10px;" matRippleCentered="true"
+          [disabled]="isWishlistDisabled" (click)="onAddToWishlist()">
+          Add to Wishlist
+        </button>
+        <button mat-button color="accent" mat-button class="cart-action" [ngClass]="{'sold-out': movie.quantity === 0}"
+          matRipple matRippleCentered="true" (click)="onAddToCart()" [disabled]="movie.quantity === 0">
+          <div *ngIf="movie.quantity > 0">Add to cart</div>
+          <mat-chip-list *ngIf="movie.quantity === 0">
+            <mat-chip color="warn" style="margin-top: 10px;" selected>Sold Out</mat-chip>
+          </mat-chip-list>
+        </button>
+      </div>
+      <div class="publisher-section">
+        <div class="author" *ngIf="movie.isAdult">18+ Genre</div>
+        <div class="author" *ngIf="movie.status">Status: <span>{{movie.status}}</span></div>
+        <div class="author" *ngIf="movie.runtime">Runtime: <span>{{movie.runtime}}</span></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<!-- ------------------------------------------------------------------------- -->
+<div *ngIf="!isMovie && hasBookInPage" class="detail-info container">
+  <div class="row content-center">
+    <div class="img-container">
+      <img [src]="book.image" alt="" style="width: 100%;">
+    </div>
+  </div>
+  <div class="row" style="flex-direction: column;">
+    <div style="display: flex;">
+      <div [matTooltip]="book.title" class="title">
+        {{book.title | sLength:40}}
+      </div>
+      <mat-chip-list style="line-height: 1;">
+        <mat-chip class="chip-style" color="primary" selected>Book</mat-chip>
+      </mat-chip-list>
+    </div>
+  </div>
+  <div style="display:flex">
+    <div class="author" *ngIf="book.authors && book.authors.length > 0" style="max-width: 50%;">By <button mat-button
+        color="primary" matTooltip="Author" *ngFor="let author of book.authors" style="margin-right: 3px;">{{author}}
+      </button>
+    </div>
+    <mat-chip-list style="width: 50%;margin-top: 2px;" aria-label="Price">
+      <div class="author" style="margin-left: 3px;"> Only At: </div>
+      <mat-chip matTooltip="Price" color="accent" selected>
+        {{ book.price | currency:"INR":"symbol":"1.0-1" }}</mat-chip>
+    </mat-chip-list>
+  </div>
+
+  <div class="subtitle" *ngIf="book.subject">Subject: <span matTooltip="Subject"> {{book.subject}}</span></div>
+
+  <div class="subtitle" *ngIf="book.subtitle" style="margin-top: 8px;">Caption: <span
+      matTooltip="Caption">{{book.subtitle}}</span></div>
+
+  <div class="subtitle" style="margin-top: 8px;">Overview</div>
+  <p style="color: rgba(0, 0, 0, 0.53);text-align: left;" matTooltip="Overview">{{book.overview}}</p>
+
+  <div class="row" style="justify-content:space-between;">
+    <div class="btn-section">
+      <button mat-button color="primary" class="cart-action" style="margin-top: 10px;" matRippleCentered="true"
+        [disabled]="isWishlistDisabled" (click)="onAddToWishlist()">
+        Add to Wishlist
+      </button>
+      <button mat-button color="accent" mat-button class="cart-action" [ngClass]="{'sold-out': book.quantity === 0}"
+        matRipple matRippleCentered="true" (click)="onAddToCart()" [disabled]="book.quantity === 0">
+        <div *ngIf="book.quantity > 0">Add to cart</div>
+        <mat-chip-list *ngIf="book.quantity === 0">
+          <mat-chip color="warn" style="margin-top: 10px;" selected>Sold Out</mat-chip>
+        </mat-chip-list>
+      </button>
+    </div>
+    <div class="publisher-section">
+      <div class="author">ISBN: <span>{{book.isbn13}}</span></div>
+      <div class="author" *ngIf="book.publisher">Publisher <span>{{book.publisher}}</span></div>
+      <div class="author" *ngIf="book.publishDate">Published Year: <span>{{book.publishDate | date:"yyyy"}}</span></div>
+    </div>
+  </div>
+</div>

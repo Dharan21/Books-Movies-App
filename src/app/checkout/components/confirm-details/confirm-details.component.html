@@ -1,0 +1,12 @@
+<div class="container">
+  <mat-grid-list cols="2" rowHeight="50px">
+    <mat-grid-tile style="display: flex;" role="listitem" *ngFor="let key of keys">
+      <div class="details" style="left: 0;">{{key | uppercase}}:</div>
+      <div class="details" style="left:90px;margin-left:2px;color: rgba(0, 0, 0, 0.53);">{{user[key]}}</div>
+    </mat-grid-tile>
+    <mat-grid-tile style="display: flex;">
+      <a style="position: absolute;left: 0;" mat-raised-button color="primary"
+        [routerLink]="['/cart', 'add-details']">Edit</a>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
